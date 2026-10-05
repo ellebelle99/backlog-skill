@@ -8,6 +8,13 @@ It is simple. One file, one command, nothing to configure.
 
 It never works on your ideas. It only captures and ranks them, quick wins first.
 
+### How to use
+
+Use /backlog
+or simply just tell Claude to backlog for you.
+
+Subcommands: `add <idea>`, `list`, `prioritize`, `done <id>`, `drop <id>`, `edit <id> <field>=<value>`. 
+
 ### Reminders (optional)
 Claude can remind you. Add this line to your `CLAUDE.md`, and Claude checks your list when a session starts:
 
@@ -26,8 +33,6 @@ npx skills add ellebelle99/backlog-skill
 Add `--global` to install it for every project. Then run `/backlog`.
 
 Without Node: copy `skills/backlog/` into your project's `.claude/skills/` (or `~/.claude/skills/` for every project).
-
-Subcommands: `add <idea>`, `list`, `prioritize`, `done <id>`, `drop <id>`, `edit <id> <field>=<value>`. 
 
 If `BACKLOG.md` does not exist, the skill creates it from its template.
 
