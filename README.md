@@ -19,3 +19,11 @@ Without Node: copy `skills/backlog/` into your project's `.claude/skills/` (or `
 Subcommands: `add <idea>`, `list`, `prioritize`, `done <id>`, `drop <id>`, `edit <id> <field>=<value>`. 
 
 If `BACKLOG.md` does not exist, the skill creates it from its template.
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md). An example of the file the skill produces is in [examples/BACKLOG.md](examples/BACKLOG.md).
+
+## License
+
+MIT, see [LICENSE](LICENSE).
