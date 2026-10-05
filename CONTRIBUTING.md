@@ -4,7 +4,8 @@ Thanks for wanting to improve this skill. It is maintained by Andreas Ellegaard 
 
 ## What fits
 
-The skill has one job: capture, list and prioritize ideas in a single `BACKLOG.md`. It never executes the items. Changes that keep that job small and fast are welcome, such as clearer wording, a missing edge case or a fix for a subcommand that misbehaves.
+The skill has one job: capture, list and prioritize ideas in a single `BACKLOG.md`. 
+It never executes the items. Changes that keep that job small and fast are welcome, such as clearer wording, a missing edge case or a fix for a subcommand that misbehaves.
 
 Changes that turn it into a task runner, add per-folder backlogs or make capture slower are unlikely to be accepted.
 
