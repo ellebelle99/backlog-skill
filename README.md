@@ -1,6 +1,8 @@
 # backlog
 
-A Claude Code skill that captures, lists and prioritises ideas in a single `BACKLOG.md`. It manages the list and never executes the items.
+A Claude Code skill that captures, lists and prioritises ideas in a single `BACKLOG.md`. 
+
+It manages the list and never executes the items.
 
 ## Install
 
