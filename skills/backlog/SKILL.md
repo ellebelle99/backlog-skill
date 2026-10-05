@@ -2,7 +2,7 @@
 name: backlog
 description: Capture, list, and prioritise ideas in BACKLOG.md — never executes items
 allowed-tools: Read, Edit, Write
-argument-hint: "[add <idea> | list | prioritize | done <id> | drop <id>]"
+argument-hint: "[this | add <idea> | list | prioritize | done <id> | drop <id>]"
 ---
 
 # /backlog
@@ -18,9 +18,9 @@ Create it from the template below if it's missing.
 
 ## Subcommands (parse from `$ARGUMENTS`)
 
-- **(no args)** → **list open items**, sorted (see Sorting). This is the default.
+- **(no args)** or **this** → **propose** items from the conversation (see Propose). This is the default.
 - **add `<idea>`** → quick-capture a new item (see Capture).
-- **list `[open|done|dropped|<area>]`** → show items, optionally filtered by status or area.
+- **list `[open|done|dropped|<area>]`** → show items, optionally filtered by status or area, sorted (see Sorting).
 - **prioritize** (alias **groom**) → re-rank; surface "quick wins" (High value + Small effort at the top); flag stale or duplicate items for the user.
 - **done `<id>`** → set status = done (move to Closed).
 - **drop `<id>`** → set status = dropped (move to Closed).
@@ -39,6 +39,16 @@ If `$ARGUMENTS` is freeform text that isn't one of the above subcommands, treat 
 | Status | open / done / dropped |
 | Area | project-defined tags (e.g. `writing` / `research` / `claude-code` / `repo-meta` / `other`) — set the list once in `BACKLOG.md`'s header and reuse it |
 
+## Propose (`/backlog` or `/backlog this`)
+
+1. Pick the candidates from the conversation so far.
+   - `/backlog` alone: every idea, to-do or deferred item the user mentioned.
+   - `/backlog this`: the one subject of the user's last message before the command. That is a single candidate.
+2. Reply with a bullet list, one line per candidate, then one question: `Add all, or which?`
+3. Wait for the answer. Write nothing to `BACKLOG.md` before it.
+4. Capture each confirmed item (see Capture) and confirm in one line per item.
+5. If the conversation holds nothing to backlog, say so in one line and stop.
+
 ## Capture (quick, cheap, no execution)
 
 1. Append the item with **defaults**: Value=`M`, Effort=`M`, Status=`open`, Area inferred from context (else `other`).
@@ -54,6 +64,8 @@ Open items sorted by **Value (H > M > L), then Effort (S < M < L)** — so High-
 ```markdown
 # Backlog
 Managed by `/backlog`. Open items sorted by value (H>M>L) then effort (S<M<L); quick wins (High value · Small effort) at the top.
+
+**Areas:** `admin` · `money` · `home` · `work` · `other`
 
 ## Open
 | ID | Title | Value | Effort | Area |
