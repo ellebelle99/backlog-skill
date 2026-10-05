@@ -61,7 +61,6 @@ See [CONTRIBUTING.md](CONTRIBUTING.md).
 A sample file is in [examples/BACKLOG.md](examples/BACKLOG.md).
 
 
-## Optional
 
 If you like the skill, a star is appreciated.
 
