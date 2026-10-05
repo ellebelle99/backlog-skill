@@ -1,6 +1,7 @@
 # Contributing
 
-Thanks for wanting to improve this skill. It is maintained by Andreas Ellegaard Andersen, who reviews every change before it goes in.
+Thanks for wanting to improve this skill. 
+It is maintained by Andreas Ellegaard Andersen, who reviews every change before it goes in.
 
 ## What fits
 
