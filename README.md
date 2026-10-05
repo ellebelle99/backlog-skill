@@ -6,7 +6,15 @@ It manages the list and never executes the items.
 
 ## Install
 
-Copy `skills/backlog/` into your project's `.claude/skills/` (or `~/.claude/skills/` for every project), then run `/backlog`.
+Run this in a terminal:
+
+```
+npx skills add ellebelle99/backlog-skill
+```
+
+Add `--global` to install it for every project. Then run `/backlog`.
+
+Without Node: copy `skills/backlog/` into your project's `.claude/skills/` (or `~/.claude/skills/` for every project).
 
 Subcommands: `add <idea>`, `list`, `prioritize`, `done <id>`, `drop <id>`, `edit <id> <field>=<value>`. 
 
